@@ -5,6 +5,7 @@
 
 #include_recipe "yum::epel"
 include_recipe "xfs"
+python_pip "awscli"
 
 %w{
   perl-Net-Amazon-EC2 perl-File-Slurp perl-DBI perl-DBD-MySQL perl-Net-SSLeay perl-IO-Socket-SSL perl-Time-HiRes
