@@ -15,7 +15,7 @@ end
 
 remote_file "/usr/bin/ec2-consistent-snapshot" do
   source   "https://raw.github.com/alestic/ec2-consistent-snapshot/master/ec2-consistent-snapshot"
-  checksum "cd401d2e1aedf7c9d390e4bc50c08b7cebc631e709a9677c146800c06d42069a"
+ # checksum "cd401d2e1aedf7c9d390e4bc50c08b7cebc631e709a9677c146800c06d42069a"
   owner    "root"
   group    "root"
   mode     0700
