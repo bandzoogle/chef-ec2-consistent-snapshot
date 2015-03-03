@@ -3,7 +3,7 @@
 # Recipe:: default
 #
 
-include_recipe "yum::epel"
+#include_recipe "yum::epel"
 include_recipe "xfs"
 
 %w{
