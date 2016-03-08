@@ -13,7 +13,7 @@ package "cpan"
 }.each do |p|
   cpan_client p do
     action 'install'
-    install_type 'cpan_module'
+    #install_type 'cpan_module'
     user 'root'
     group 'root'
   end
