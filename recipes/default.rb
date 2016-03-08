@@ -5,13 +5,18 @@
 
 #include_recipe "yum::epel"
 include_recipe "xfs"
-python_pip "awscli"
+
+package "cpan"
 
 %w{
-  perl-Net-Amazon-EC2 perl-File-Slurp perl-DBI perl-DBD-MySQL perl-Net-SSLeay perl-IO-Socket-SSL perl-Time-HiRes
-  perl-DateTime perl-Params-Validate
+  Module::Build Net::Amazon::EC2 File::Slurp DBI DBD::mysql Net::SSLeay IO::Socket::SSL Time::HiRes DateTime Params::Validate
 }.each do |p|
-  package p
+  cpan_client p do
+    action 'install'
+    install_type 'cpan_module'
+    user 'root'
+    group 'root'
+  end
 end
 
 remote_file "/usr/bin/ec2-consistent-snapshot" do

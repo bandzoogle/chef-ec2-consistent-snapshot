@@ -8,3 +8,4 @@ version          "0.3.0"
 
 depends "yum"
 depends "xfs"
+depends "cpan"
